@@ -8,6 +8,7 @@
 {{- end -}}
 {{- end -}}
 
+
 {{- define "vcluster.k8s.capabilities.version" -}}
 {{/* We need to workaround here for unit tests because Capabilities.KubeVersion.Version is not supported, so we use .Chart.Version */}}
 {{- if hasPrefix "test-" .Chart.Version -}}
