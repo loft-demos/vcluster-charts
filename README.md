@@ -7,7 +7,7 @@ The `.tgz` for the chart may be downloades from the [repository releases](https:
 Create a `vcluster.yaml` with the following values (along with any other additional configuration needed based on the [vCluster configuration reference documentation](https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/):
 
 > [!NOTE]
-> Currently only the `k8s` or plain vanilla Kubernetes distubtion is supported.
+> Currently only the `k8s` plain vanilla Kubernetes distubtion is supporte and `k8s` is the default `controlPlane.distro` that is enabled by default.
 
 ```yaml
 controlPlane: 
