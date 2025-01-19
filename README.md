@@ -10,15 +10,14 @@ Create a `vcluster.yaml` with the following values (along with any other additio
 > Currently only the `k8s` or plain vanilla Kubernetes distubtion is supported.
 
 ```yaml
-controlPlane:
-  advanced:
-    # DefaultImageRegistry will be used as a prefix for all internal images deployed by vCluster or Helm. This makes it easy to
-    # upload all required vCluster images to a single private repository and set this value. Workload images are not affected by this.
-    defaultImageRegistry: "ghcr.io/loft-demos/"
+controlPlane: 
   statefulSet:
-    # the tag should match one of the tags of the loft-demos/k8s-image-mirror/ [vcluster-pro images with embeeded k8s binaries](),
-    # such as: `vcluster-pro:0.22.3-k8s.v1.32.0`
-    tag: 0.22.3-k8s.v1.32.0
+    image:
+      registry: "ghcr.io/loft-demos/"
+      repository: vluster-pro
+      # the tag should match one of the tags of the loft-demos/k8s-image-mirror/ [vcluster-pro images with embeeded k8s binaries](https://github.com/loft-demos/k8s-image-mirror/pkgs/container/vcluster-pro),
+      # such as: `vcluster-pro:0.22.3-k8s.v1.32.0`
+      tag: 0.22.3-k8s.v1.32.0
 ```
 Deploy a vCluster with vCluster embedded binaries chart:
 ```bash
