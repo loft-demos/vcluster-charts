@@ -14,9 +14,9 @@ controlPlane:
   statefulSet:
     image:
       registry: "ghcr.io/loft-demos/"
-      repository: vluster-pro
+      repository: vcluster-pro
       # the tag should match one of the tags of the loft-demos/k8s-image-mirror/ [vcluster-pro images with embeeded k8s binaries](https://github.com/loft-demos/k8s-image-mirror/pkgs/container/vcluster-pro),
-      # such as: `vcluster-pro:0.22.3-k8s.v1.32.0`
+      # such as: `0.22.3-k8s.v1.32.0`
       tag: 0.22.3-k8s.v1.32.0
 ```
 
