@@ -59,6 +59,4 @@ See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command docu
 
 Learn more on [www.vcluster.com](https://vcluster.com).
 
-![vcluster Intro](https://github.com/loft-sh/vcluster/raw/main/docs/static/media/vcluster-comparison.png)
-
 Learn more in the [documentation](https://vcluster.com/docs/what-are-virtual-clusters).
