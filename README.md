@@ -4,10 +4,12 @@ Customized vCluster Helm chart for use with custom vcluster container images tha
 The `.tgz` for the chart may be downloades from the [repository releases](https://github.com/loft-demos/vcluster-charts/releases) and the chart is meant to be used with the vcluster-pro images published in the [loft-demos/k8s-image-mirror GitHub Container Registry](https://github.com/loft-demos/k8s-image-mirror/pkgs/container/vcluster-pro).
 
 ## Usage
-Create a `vcluster.yaml` with the following values (along with any other additional configuration needed based on the [vCluster configuration reference documentation](https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/):
+Create a `vcluster.yaml` with the following values (along with any other additional configuration needed based on the [vCluster configuration reference documentation](https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/). The tag should match one of the tags of the loft-demos/k8s-image-mirror/ [vcluster-pro images with embeeded k8s binaries](https://github.com/loft-demos/k8s-image-mirror/pkgs/container/vcluster-pro) and configured as below:
 
 > [!NOTE]
-> Currently, only the [vanilla Kubernetes distribution](https://kubernetes.io/releases/) is supported. `k8s` is the default `controlPlane.distro` and is enabled by default, so no additional configuration is needed for the `distro`.
+> Currently, only the [vanilla Kubernetes distribution](https://kubernetes.io/releases/) is supported. `k8s` is the default `controlPlane.distro` and is enabled by default, so no additional configuration is needed for the `distro`. 
+
+
 
 ```yaml
 controlPlane: 
@@ -17,7 +19,7 @@ controlPlane:
       repository: vcluster-pro
       # the tag should match one of the tags of the loft-demos/k8s-image-mirror/ [vcluster-pro images with embeeded k8s binaries](https://github.com/loft-demos/k8s-image-mirror/pkgs/container/vcluster-pro),
       # such as: `0.22.3-k8s.v1.32.0`
-      tag: 0.22.3-k8s.v1.32.0
+      tag: 0.23.0-k8s.v1.32.1
 ```
 
 Deploy a vCluster with vCluster embedded binaries chart:
@@ -28,5 +30,5 @@ helm install my-vcluster vcluster/vcluster --values vcluster.yaml
 
 For Air-Gapped Environments:
 ```bash
-helm install my-vcluster ./vcluster-0.22.3.tgz --values vcluster.yaml
+helm install my-vcluster ./vcluster-0.23.0.tgz --values vcluster.yaml
 ```
