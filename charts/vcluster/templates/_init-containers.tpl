@@ -8,7 +8,6 @@
 {{- end -}}
 {{- end -}}
 
-
 {{- define "vcluster.k8s.capabilities.version" -}}
 {{/* We need to workaround here for unit tests because Capabilities.KubeVersion.Version is not supported, so we use .Chart.Version */}}
 {{- if hasPrefix "test-" .Chart.Version -}}
@@ -20,7 +19,7 @@
 
 {{/* Bump $defaultTag value whenever k8s version is bumped */}}
 {{- define "vcluster.k8s.controllerManager.image.tag" -}}
-{{- $defaultTag := "v1.31.1" -}}
+{{- $defaultTag := "v1.32.1" -}}
 {{- if and (not (empty .Values.controlPlane.distro.k8s.version)) (eq .Values.controlPlane.distro.k8s.controllerManager.image.tag $defaultTag) -}}
 {{ .Values.controlPlane.distro.k8s.version }}
 {{- else -}}
@@ -36,7 +35,7 @@
 
 {{/* Bump $defaultTag value whenever k8s version is bumped */}}
 {{- define "vcluster.k8s.apiServer.image.tag" -}}
-{{- $defaultTag := "v1.31.1" -}}
+{{- $defaultTag := "v1.32.1" -}}
 {{- if and (not (empty .Values.controlPlane.distro.k8s.version)) (eq .Values.controlPlane.distro.k8s.apiServer.image.tag $defaultTag) -}}
 {{ .Values.controlPlane.distro.k8s.version}}
 {{- else -}}
@@ -53,7 +52,7 @@
 
 {{/* Bump $defaultTag value whenever k8s version is bumped */}}
 {{- define "vcluster.k8s.scheduler.image.tag" -}}
-{{- $defaultTag := "v1.31.1" -}}
+{{- $defaultTag := "v1.32.1" -}}
 {{- if and (not (empty .Values.controlPlane.distro.k8s.version)) (eq .Values.controlPlane.distro.k8s.scheduler.image.tag $defaultTag) -}}
 {{ .Values.controlPlane.distro.k8s.version}}
 {{- else -}}
