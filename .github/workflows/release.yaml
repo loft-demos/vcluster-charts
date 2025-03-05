@@ -42,7 +42,7 @@ jobs:
       - name: Package and push helm chart
         run: |
           helm package ./charts/vcluster --version ${{ steps.set-variables.outputs.VERSION }}
-          helm push ./vcluster-chart-${{ steps.set-variables.outputs.VERSION }}.tgz oci://${{ steps.set-variables.outputs.REPOSITORY }}/charts  
+          helm push ./vcluster-${{ steps.set-variables.outputs.VERSION }}.tgz oci://${{ steps.set-variables.outputs.REPOSITORY }}/charts  
 
       - name: Configure Git
         run: |
