@@ -2,6 +2,35 @@ apiVersion: v1
 entries:
   vcluster:
   - apiVersion: v2
+    created: "2025-03-24T10:54:48.500018122Z"
+    description: vcluster - Virtual Kubernetes Clusters
+    digest: 1b98db713f91f8cedf4b89d6f952d2870834fdd9dac254c322f2968265a4c52b
+    home: https://vcluster.com
+    icon: https://static.loft.sh/branding/logos/vcluster/vertical/vcluster_vertical.svg
+    keywords:
+    - developer
+    - development
+    - sharing
+    - share
+    - multi-tenancy
+    - tenancy
+    - cluster
+    - space
+    - namespace
+    - vcluster
+    - vclusters
+    maintainers:
+    - email: info@loft.sh
+      name: Loft Labs, Inc.
+      url: https://twitter.com/loft_sh
+    name: vcluster
+    sources:
+    - https://github.com/loft-demos/vcluster-charts/charts/vcluster
+    type: application
+    urls:
+    - https://github.com/loft-demos/vcluster-charts/releases/download/vcluster-0.24.0/vcluster-0.24.0.tgz
+    version: 0.24.0
+  - apiVersion: v2
     created: "2025-03-02T15:42:36.504297808Z"
     description: vcluster - Virtual Kubernetes Clusters
     digest: 1a114f250fcd0250f83245375aed7627826a6baf565ea309af354f49e6abf998
@@ -88,4 +117,4 @@ entries:
     urls:
     - https://github.com/loft-demos/vcluster-charts/releases/download/vcluster-0.22.3/vcluster-0.22.3.tgz
     version: 0.22.3
-generated: "2025-03-17T18:08:30.622382076Z"
+generated: "2025-03-24T10:54:48.500031958Z"
